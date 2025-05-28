@@ -1,4 +1,4 @@
- .nav{
+        .nav{
             display: flex;
         }
         .d{
@@ -19,6 +19,7 @@
         }
         .container{
             text-align: center;
+            padding: 40px;
         }
         .container1{
             display: flex;
