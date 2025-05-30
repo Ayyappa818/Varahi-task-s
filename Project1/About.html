@@ -4,7 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+      <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 10px 20px;
+      gap: 10px;
+    }
+
+    .nav .d {
+      padding: 10px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .Article {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      background-color: aliceblue;
+    }
+
+    .Article img {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    button {
+      border-radius: 25px;
+      border: none;
+      background-color: rgb(5, 44, 234);
+      color: white;
+      padding: 15px 30px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .heading, .heading2 {
+      text-align: center;
+      margin: 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    h5 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .youtubecard {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .youtubecard iframe {
+      width: 100%;
+      max-width: 900px;
+      height: 400px;
+    }
+
+    .container, .container1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card1, .card {
+      width: 100%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .card-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .container2 {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .container3 {
+      border: 1px solid gainsboro;
+      background-color: aliceblue;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .ftr {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 20px;
+      background-color: azure;
+    }
+
+    .ftr ul, .fttr ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ftr li, .fttr li {
+      margin: 8px 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .fttr {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    hr {
+      margin: 20px 0;
+    }
+
+    /* Media Queries for Small Screens */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h5 {
+        font-size: 16px;
+      }
+
+      .Article {
+        flex-direction: column;
+      }
+
+      .content, .Article img {
+        width: 100%;
+        padding: 10px;
+      }
+
+      .youtubecard iframe {
+        height: 250px;
+      }
+
+      .fttr, .ftr {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .ftr div, .fttr ul {
+        margin: 10px 0;
+      }
+    }
+  </style>
+
+    <!-- <style>
         .nav{
             display: flex;
         }
@@ -24,6 +222,7 @@
         }
         .Article{
             display: flex;
+            margin: 40px;
         }
         .content{
             width: 50%;
@@ -48,25 +247,25 @@
             font-size: 20px;
             font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-        .container{
-            display: flex ;
-            padding: 40px;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
-        .card1{
-            background-color: aliceblue;
-            text-align: center;
+        
+        .card1 {
+            width: 400px;
+            border: 1px solid #ccc;
             border-radius: 10px;
-            padding: 20px;
-            width: 50%;
-            margin: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #fff;
         }
-        .card2{
-            background-color: aliceblue;
-            text-align: center;
+        
+        .card-img {
+            width: 100%;
             border-radius: 10px;
-            padding: 20px;
-            width: 50%;
-            margin: 15px;  
         }
         .container1{
             display: flex;
@@ -93,7 +292,24 @@
             padding: 20px;
             margin: 100px;
         }
-    </style>
+        .ftr{
+            display: flex;
+            justify-content: space-evenly;
+            background-color:azure;
+        }
+        li{
+            margin: 8px;
+            font-family: "Google Sans Text", Arial, Helvetica, sans-serif;
+            color: rgb(32, 33, 36);
+            font-size: 16px;
+            font-weight:  400;
+            letter-spacing: 0.1px;
+        }
+        .fttr{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style> -->
 </head>
 <body>
     <div class="nav">
@@ -123,27 +339,27 @@
 
     <div class="container">
         <div class="card1">
-            <img style="border-radius:10px;" width="400px" src="https://www.gstatic.com/marketing-cms/assets/images/40/d1/4daf3cf146f5a72ea8be46f0504d/gdm-about-i-o.png=n-w780-h438-fcrop64=1,0000003dffffffc3-rw" alt="">
+            <img class="card-img" src="https://www.gstatic.com/marketing-cms/assets/images/40/d1/4daf3cf146f5a72ea8be46f0504d/gdm-about-i-o.png=n-w780-h438-fcrop64=1,0000003dffffffc3-rw" alt="Google DeepMind">
             <p>GOOGLE DEEPMIND</p>
-            <h5>Discover the latest updates to Gemini 2.5, our most intelligent model yet</h5>
+            <h5>Discover the latest updates to Gemini 2.5, our most intelligent model yet.</h5>
         </div>
-        <div class="card2">
-            <img style="border-radius:10px;" width="400px" src="https://www.gstatic.com/marketing-cms/assets/images/b7/4d/ee59cb3749e7830c5eda20144d46/ai-mode-about-2.png=n-w780-h438-fcrop64=1,0000003dffffffc3-rw" alt="">
-            <p>SEARCH</p>
-            <h5>Coming to Search: AI Mode in the U.S., with new, advanture features to help oyu find information and get things done.</h5>
-        </div>
-    </div>
-
-    <div class="container">
+    
         <div class="card1">
-            <img style="border-radius:10px;" width="400px" src="https://www.gstatic.com/marketing-cms/assets/images/07/09/0b8fdbb94ebd9226d1b1e3855fcf/gen-media-about.png=n-w780-h438-fcrop64=1,0000003dffffffc3-rw" alt="">
-            <p>GENERATIVE MEDIA</p>
-            <h5>Get creative with our latest generative media models and tools, like Imagen 4,Veo 3 and Flow - an AI filmmaking tool.</h5>
+            <img class="card-img" src="https://www.gstatic.com/marketing-cms/assets/images/b7/4d/ee59cb3749e7830c5eda20144d46/ai-mode-about-2.png=n-w780-h438-fcrop64=1,0000003dffffffc3-rw" alt="Search AI Mode">
+            <p>SEARCH</p>
+            <h5>Coming to Search: AI Mode in the U.S., with new, advanced features to help you find information and get things done.</h5>
         </div>
-        <div class="card2">
-            <img style="border-radius:10px;" width="400px" src="https://www.gstatic.com/marketing-cms/assets/images/0c/c1/a60b398c4716b07e599b8a06cf91/about-geminilive.png=n-w780-h438-fcrop64=1,0000003dffffffc3-rw" alt="">
+    
+        <div class="card1">
+            <img class="card-img" src="https://www.gstatic.com/marketing-cms/assets/images/07/09/0b8fdbb94ebd9226d1b1e3855fcf/gen-media-about.png=n-w780-h438-fcrop64=1,0000003dffffffc3-rw" alt="Generative Media">
+            <p>GENERATIVE MEDIA</p>
+            <h5>Get creative with our latest generative media models and tools, like Imagen 4, Veo 3, and Flow — an AI filmmaking tool.</h5>
+        </div>
+    
+        <div class="card1">
+            <img class="card-img" src="https://www.gstatic.com/marketing-cms/assets/images/0c/c1/a60b398c4716b07e599b8a06cf91/about-geminilive.png=n-w780-h438-fcrop64=1,0000003dffffffc3-rw" alt="Gemini App">
             <p>GEMINI APP</p>
-            <h5>THe Gemini app is getting more personal, proactive and powerful. And Gemini Live's camera and screen sharing will be on both Android and iOS.</h5>
+            <h5>The Gemini app is getting more personal, proactive, and powerful. Gemini Live's camera and screen sharing will be available on both Android and iOS.</h5>
         </div>
     </div>
 
@@ -182,6 +398,70 @@
         <button style="border-radius: 25px;border: none;background-color: rgb(224, 230, 232);color: rgb(15, 113, 234); padding: 15px;">Subscribe</button>
     </div>
     
-    <div></div>
+    <footer>
+        <div class="ftr">
+            <div>
+                <ul style="list-style: none;">
+                    <li>Resources</li>
+                    <li>Blog</li>
+                    <li>Brand Resource Center</li>
+                    <li>Careers</li>
+                    <li>Contact us</li>
+                    <li>Help Center</li>
+                    <li>Investor Relations</li>
+                    <li>Locations</li>
+                    <li>Press Resources</li>
+                </ul>
+            </div>
+            <div>
+                <ul style="list-style: none;">
+                    <li>Outreach and initiatives</li>
+                    <li>Accessibility</li>
+                    <li>Crisis Response</li>
+                    <li>Google.org</li>
+                    <li>Google Health</li>
+                    <li>Grow with Google</li>
+                    <li>Learning</li>
+                    <li>Public Policy</li>
+                    <li>Sustainability</li>
+                </ul>
+            </div>
+            <div>
+                <ul style="list-style: none;">
+                    <li>Research and technology</li>
+                    <li>Google AI</li>
+                    <li>Google Cloud</li>
+                    <li>Google DeepMind</li>
+                    <li>Google for Developers</li>
+                    <li>Google Labs</li>
+                    <li>Google Research</li>
+                </ul>
+            </div>
+            <div>
+                <ul style="list-style: none;">
+                    <li>More about us</li>
+                    <li>Human rights</li>
+                    <li>Safety Center</li>
+                    <li>Supplier responsibility</li>
+                    <li>Transparency Center</li>
+                    <li>Transparency Report</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="fttr">
+        <ul style="list-style: none;">
+            <li>Google</li>
+            <li>Privacy</li>
+            <li>Terms</li>
+        </ul>
+        <ul style="list-style: none;">
+            <li>Help</li>
+            <li>English</li>
+        </ul>
+        </div>
+    </footer>
 </body>
 </html>
